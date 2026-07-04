@@ -1,0 +1,151 @@
+.loading-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #18162b,
+        #211d3c,
+        #120f24
+    );
+
+    z-index: 99999;
+
+}
+
+.loading-background{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.15;
+
+    background-image:
+        radial-gradient(circle,#ffffff22 1px,transparent 1px);
+
+    background-size:40px 40px;
+
+}
+
+.loading-container{
+
+    width:420px;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.logo-circle{
+
+    width:120px;
+
+    height:120px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    border:3px solid white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:64px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.logo-title{
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:36px;
+
+    font-family:"Outfit",sans-serif;
+
+}
+
+.loading-bubble{
+
+    margin-top:40px;
+
+    background:white;
+
+    color:#111;
+
+    padding:18px;
+
+    border-radius:35px;
+
+    position:relative;
+
+    font-weight:600;
+
+}
+
+.loading-bubble::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:40px;
+
+    bottom:-14px;
+
+    width:25px;
+
+    height:25px;
+
+    background:white;
+
+    transform:rotate(45deg);
+
+}
+
+.loading-progress{
+
+    margin-top:35px;
+
+    height:10px;
+
+    border-radius:20px;
+
+    background:#ffffff22;
+
+    overflow:hidden;
+
+}
+
+.loading-progress-bar{
+
+    width:15%;
+
+    height:100%;
+
+    background:white;
+
+    border-radius:20px;
+
+}
