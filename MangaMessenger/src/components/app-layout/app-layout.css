@@ -1,0 +1,59 @@
+/* ==========================================
+   APP LAYOUT
+========================================== */
+
+.app-layout {
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        var(--sidebar-width)
+        var(--chat-list-width)
+        1fr;
+
+    background: var(--background-color);
+
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.app-layout__sidebar {
+
+    border-right: 1px solid var(--border-color);
+
+    background: var(--surface-color);
+
+}
+
+/* ==========================================
+   CHAT LIST
+========================================== */
+
+.app-layout__chat-list {
+
+    border-right: 1px solid var(--border-color);
+
+    background: var(--surface-light);
+
+    padding: var(--space-lg);
+
+}
+
+/* ==========================================
+   CHAT WINDOW
+========================================== */
+
+.app-layout__chat-window {
+
+    padding: var(--space-xl);
+
+    background: var(--background-color);
+
+    color: var(--text-primary);
+
+}

@@ -1,14 +1,51 @@
 export class Router {
 
-    constructor() {
+    constructor(app) {
 
-        this.currentPage = "chat";
+        this.app = app;
+
+        this.currentPage = "loading";
 
     }
 
     start() {
 
         console.log("Router Started");
+
+        this.navigate(this.currentPage);
+
+    }
+
+    navigate(page) {
+
+        this.currentPage = page;
+
+        switch (page) {
+
+            case "loading":
+
+                this.app.showLoadingScreen();
+
+                // Temporary transition
+                setTimeout(() => {
+
+                    this.navigate("chat");
+
+                }, 3000);
+
+                break;
+
+            case "chat":
+
+                this.app.showMainLayout();
+
+                break;
+
+            default:
+
+                console.warn(`Unknown page: ${page}`);
+
+        }
 
     }
 
